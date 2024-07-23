@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="color:red;">This is a heading</h1>
+
+    <script>
+        //console.log("Hello JavaScript");
+       // alert("Hello I am Javascript");
+       // document.write("Java Script");
+      // a=[];
+       //console.log(a);
+       //console.log(typeof a);
+
+       //Datatypes
+       //Number
+       //String
+       //undefined
+       //Null
+       //object
+       //symbol
+       //boolean
+
+       //3 keywords(not datatypes)
+       //var
+       //let ES6
+       //const ES6
+
+      // var a=10;//we can redeclare the declared element and reassign is also posssible
+      // var a=100;
+      // a=50;
+      // let b=20;//not redeclare the declared element but reassign is done
+//b=50;
+//console.log(b);
+//console.log(a);
+       //const c=30;//not redeclare the declared element and reassign is  also not possible
+      // {
+     //  var a=10;
+       //console.log(a);//global scope var
+       //}
+       //console.log(a);
+//{let b=10;}
+ //console.log(b);
+//{
+// const c=10;
+//}
+//console.log(c);
+//var i=10;
+//for(var i=0;i<5;i++){
+
+//}
+//console.log(i);
+
+
+//let j=10;
+//for(let j=0;j<5;j++){
+
+//}
+//console.log(j);
+//output();
+//function output(){
+  //  console.log("Hello");
+//}
+
+//let and const ke saath hoisting nahi kar sakta
+//var ke saath hoisting kar sakte hai
+
+//console.log(x);
+//var x=10;
+
+//console.log(b);
+//let b=20;
+
+
+//loops types->entry control loop,exist control loop
+let f,g;
+function output(f=4,g=100){
+    return f+g;
+}
+//console.log(output(1,2));
+console.log(output(10,20));
+console.log(output(1));
+console.log(output());//->when we give default not use but if we not give then error
+//functions types->Anonymous function,naming function
+
+
+//(function(a,b){
+ //   console.log("Hello",a+b)
+//})(10,20);//immediate call hoga,hand to hand call hota hai
+
+
+//(function(a,b){
+  //  console.log(`Hello ${a+b}`);
+//})(10,20);//backticks
+
+
+//(function(a,b){
+//    console.log(`Hello ${a-b}`);//error
+//})(10,20);//backticks
+
+let f1=
+function(a,b){
+    console.log(`Hello ${a+b}`);
+};//anonymous function ko variable me store kar liya usse hi function expression kehte hai
+
+
+let f2=
+function(a,b){
+    return `Hello ${a-b}`;
+}//anonymous function ko variable me store kar liya usse hi function expression
+
+//it is not invoke immediate we invoke it after storing it in the variable
+f1(1,2);
+//f2(1,2);
+console.log(f2(1,2));
+
+// (()=>{
+//})
+
+let f4=(a,b)=>{  
+    return a+b; //arrow function (no need of return keyword)
+}
+console.log(f4(2,3));
+
+
+let f5=(a,b)=>a+b;
+console.log(f5(2,3));
+
+//difference between arrow function and anonymous function
+//arrow ke paas this pointer ka scope nahi hota par anonymous ke paas this pointer ke scope hota hai
+
+//Closures-->function with its lexical scope//aur kisi language me environment nahi aata hai
+function Outer(){
+    let a=10;
+    let b=20;
+    function inner(){
+console.log(a+b);
+    }
+    return inner;
+}
+console.log(Outer());
+let ans=Outer();
+ans();
+
+//Callback function
+function f6(a){
+ a();
+}
+function f7(){
+   console.log("Hello i am functionf2")
+}
+f6(f7);
+
+let a,b;
+function output(x,y,z){
+}
+function sum(a,b){
+    console.log(a+b);
+}
+output(sum(1,2,sum));
+
+function Output(x){
+x();
+
+}
+Output (function x(){
+   console.log("Hi");
+})
+
+    </script>
+</body>
+</html>
