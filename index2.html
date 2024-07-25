@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #yellow{
+        width:20%;
+        height:80px;
+        background-color:yellow;
+        margin-top:10px;
+    }
+    #red{
+        width:20%;
+        height:80px;
+        background-color:red;
+        margin-top:10px;
+    }
+    #blue{
+        width:20%;
+        height:80px;
+        background-color:blue;
+        margin-top:10px;
+    }
+    #green{
+        width:20%;
+        height:80px;
+        background-color:green;
+        margin-top:10px;
+    }
+    </style>
+</head>
+<body id="x">
+    <div class="color" id="yellow"></div>
+    <div class="color" id="red"></div>
+    <div class="color" id="blue"></div>
+    <div class="color" id="green"></div>
+    <!--<button id="btn">Submit</button>-->
+    <script>
+       // document.getElementById("btn").onclick = function(){
+            //console.log("Hello Java Script")
+            //alert("Hey Javascript")
+        //}
+document.getElementById("yellow").onclick=function(){
+document.getElementById("x").style.backgroundColor="yellow";
+}
+document.getElementById("red").onclick=function(){
+document.getElementById("x").style.backgroundColor="red";
+}
+document.getElementById("blue").onclick=function(){
+document.getElementById("x").style.backgroundColor="blue";
+}
+document.getElementById("green").onclick=function(){
+document.getElementById("x").style.backgroundColor="green";
+}
+    
+    </script>
+</body>
+</html>

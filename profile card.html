@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing:border-box;
+        }
+        .container{
+            border:solid black;
+            border-radius:10px;
+            width:30%;
+            height:400px;
+            padding-top:20px;
+            margin-left:40px;
+          background-color:grey;
+        }
+        
+        .two{
+            margin-left:10px;
+            margin-top:10px;
+        }
+    .three{
+        margin-top:10px;
+        margin-left:10px;
+    }
+   .container2{ 
+    border:solid black;
+            border-radius:10px;
+            width:30%;
+            height:400px;
+            padding-top:20px;
+            margin-left:30px;
+            display:flex;
+            background-color: grey;
+   }
+   .x{
+    display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-top:150px;
+
+   }
+   .pic{
+    width:30%;
+    height:100px;
+    margin-top:100px;
+    margin-left:20px;
+border:solid black;
+   }
+   img{
+    width:100%;
+    height:100%;
+   }
+  
+   .container6{
+    display:flex;
+    width:100%;
+   }
+   .container4{
+    width:100%;
+    height:20px;
+margin-top:100px;
+margin-left:30px;
+   }
+   .container5{
+    width:80%;
+    height:20px;
+    margin-left:40px;
+   }
+    </style>
+</head>
+<body><div class="x">
+    <div class="container">
+    <h3 class="three">Image:</h3>
+    <input type="text"id="i" class="two">
+    <h3 class="three">Name:</h3>
+    <input type="text"id="n" class="two">
+    <h3 class="three">E-mail:</h3>
+    <input type="text"id="e" class="two">
+    <h3 class="three">Course:</h3>
+    <input type="text"id="c" class="two">
+    <h3 class="three">Mobile:</h3>
+    <input type="text"id="m" class="two">
+    </div>
+    <div class="container2">
+<div class="pic">
+<img src="" alt="" id="img">
+    </div>
+<div class="container4">
+   <div class="container6"><h5 class="y">.Name:</h5>
+    <div class="container5" id="ans"></div> </div>
+<div class="container6"><h5 class="y">.Email:</h5>
+<div class="container5" id="ans2"></div> </div>
+<div class="container6"><h5 class="y">.Course:</h5>
+<div class="container5"id="ans3"></div> </div>
+<div class="container6"><h5 class="y">.Mobile:</h5>
+    <div class="container5" id="ans4"></div> </div>
+</div>
+    </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("i").oninput=function(){
+    let text5=document.getElementById("i").value;
+    //console.log(text);
+    document.getElementById("img").src=text5;
+}
+   document.getElementById("n").oninput=function(){
+    let text=document.getElementById("n").value;
+    //console.log(text);
+    document.getElementById("ans").innerHTML=`${text}`;
+}
+document.getElementById("e").oninput=function(){
+    let text1=document.getElementById("e").value;
+    //console.log(text);
+    document.getElementById("ans2").innerHTML=`${text1}`;
+}
+document.getElementById("c").oninput=function(){
+    let text3=document.getElementById("c").value;
+    //console.log(text);
+    document.getElementById("ans3").innerHTML=`${text3}`;
+}
+document.getElementById("m").oninput=function(){
+    let text4=document.getElementById("m").value;
+    //console.log(text);
+    document.getElementById("ans4").innerHTML=`${text4}`;
+}
+    </script>
+</body>
+</html>

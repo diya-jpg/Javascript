@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   *{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+   }
+    .main2{
+        width:80%;
+        height:200px;
+        border: solid red;
+        margin-left:10px;
+margin-top:10px;
+    }
+.side1{
+    margin-top:10px;
+    margin-left:10px;
+}
+
+    
+</style>
+<body>
+        <textarea id="box" class="main" rows="10" cols="30" style="margin-left:10px;margin-top:10px;border:solid red"></textarea>
+         <h1 style="margin-left:10px;">CSS Properties</h1>
+        <input type="text" class="side1" id="one">
+        <input type="text" class="side1" id="two">
+        <input type="text" class="side1" id="three">
+    <div class="main2" id="box2"></div>
+    <script>
+document.querySelector("#box").oninput=function(){
+    let text1=document.querySelector("#box").value;
+    console.log(text1);
+    document.querySelector("#box2").innerHTML=`<h1>${text1}</h1>`;
+}
+let x=document.querySelector("#one");
+x.oninput=(function(){
+    document.querySelector("#box2").style.color=x.value;
+})
+let z=document.querySelector("#two");
+z.oninput=(function(){
+    document.querySelector("#box2").style.backgroundColor=z.value;
+})
+let y=document.querySelector("#three");
+y.oninput=(function(){
+    document.querySelector("#box2").style.fontSize=y.value+"px";
+})
+
+
+    </script>
+</body>
+</html>

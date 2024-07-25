@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    .main2{
+        width:80%;
+        height:200px;
+        background-color:aqua;
+        margin-left:30px;
+    }
+</style>
+<body>
+        <textarea id="box" class="main" rows="10" cols="30"></textarea>
+    <div class="main2" id="box2"></div>
+    <script>
+document.getElementById("box").oninput=function(){
+    let text=document.getElementById("box").value;
+    console.log(text);
+    document.getElementById("box2").innerHTML=`<h1>${text}</h1>`;
+}
+    </script>
+</body>
+</html>

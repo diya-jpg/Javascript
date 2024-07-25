@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let obj=[{
+            name:"Diya",
+            rollno:1001,
+            email:"diyabari2004@gmail.com",
+            age:19,
+            city:"Jaipur"
+        },
+    {name:"Akshat",
+            rollno:1001,
+            email:"diyabari2004@gmail.com",
+            age:20,
+            city:"Jaipur"
+        },
+    {name:"Rohit",
+            rollno:1001,
+            email:"diyabari2004@gmail.com",
+            age:15,
+            city:"Jaipur"},
+        {name:"Diya",
+            rollno:1001,
+            email:"diyabari2004@gmail.com",
+            age:16,
+            city:"Jaipur"},
+        {name:"Chitra",
+            rollno:1001,
+            email:"diyabari2004@gmail.com",
+            age:19,
+            city:"Jaipur"}];
+        //console.log(obj);
+        //console.log(obj.name);
+        //console.log(obj["name"]);
+        //console.log(obj["email"]);
+        //for(i in obj){
+          //  console.log(i,obj[i]);
+        //}
+        let b=obj.filter((item)=>item.age>18);
+        console.log(b);
+        for(let i in obj){
+            if(obj[i].age>18){
+                //console.log(obj[i].name);
+            console.log(obj[i]);
+            }
+        }
+        //console.log(obj.marks["m"]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        width:50%;
+        height: 300px;
+        background-color: aqua;
+    }
+
+    .btn {
+        width: 40%;
+        height: 20px;
+        background-color: grey;
+        margin-top: 10px;
+    }
+   .in{
+    width:25%;
+    height:15px;
+    background-color:black;
+   }
+</style>
+
+<body>
+    <div class="main" id="body">
+        <p id="main2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, officia?</p>
+        <button class="btn" id="upper">UpperCase</button>
+        <button class="btn" id="lower">LowerCase</button>
+        <button class="btn" id="increase">+</button>
+        <button class="btn" id="decrease">-</button>
+        <input type="color" id="color2">
+        <input type="range" id="color3">
+       
+    </div>
+    <script>
+let counter=16;
+        document.getElementById("upper").onclick = function(){
+            console.log("Hello")
+            document.getElementById("main2").style.textTransform = "uppercase";
+        }
+        document.getElementById("lower").onclick = function(){
+            console.log("Hello")
+            document.getElementById("main2").style.textTransform = "lowercase";
+        }
+        document.getElementById("increase").onclick = function(){
+            counter ++;
+                console.log(counter+"px");
+                document.getElementById("main2").style.fontSize=counter+"px";
+              
+        }
+        document.getElementById("decrease").onclick = function(){
+            document.getElementById("main2").style.fontSize=counter+"px";
+                counter --;
+                console.log(counter+"px")  
+        }
+        document.getElementById("color2").oninput = function(){
+
+    document.getElementById("body").style.color=document.getElementById("color2").value;
+    document.getElementById("body").style.backgroundColor=document.getElementById("color2").value;
+        }
+        document.getElementById("color3").oninput = function(){
+
+document.getElementById("body").style.backgroundColor=document.getElementById("color3").value;
+       
+    }
+    </script>
+</body>
+
+</html>
