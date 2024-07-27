@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+        display: flex;
+    }
+    .block {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        background-color: grey;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block" id="block1"></div>
+        <div class="block" id="block2"></div>
+        <div class="block" id="block3"></div>
+        <div class="block" id="block4"></div>
+        <div class="block" id="block5"></div>
+        <div class="block" id="block6"></div>
+        <div class="block" id="block7"></div>
+        <div class="block" id="block8"></div>
+    </div>
+    <input type="text" id="colorInput" placeholder="Enter color">
+    <input type="number" id="numberInput" placeholder="Enter block number" min="1" max="8">
+    <button onclick="lightUpBlock()">Submit</button>
+    <script>
+      function lightUpBlock() {
+    const color = document.getElementById('colorInput').value;
+    const number = document.getElementById('numberInput').value;
+
+    
+    for (let i = 1; i <= 8; i++) {
+        document.getElementById(`block${i}`).style.backgroundColor = 'grey';
+    }
+
+    if (number >= 1 && number <= 8) {
+        document.getElementById(`block${number}`).style.backgroundColor = color;
+    } else {
+        alert('Please enter a valid block number between 1 and 8.');
+    }
+}
+  
+    </script>
+</body>
+</html>

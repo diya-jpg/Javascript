@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback--->call back hell--->promises--->promise chain--->async await
+       // console.log("I am one");
+        //console.log("I am two");
+        //console.log("I am three");
+       //setTimeout(( )=>{for(let i=0;i<10000;i++){
+         // console.log(i);
+       // }
+    //},15000)
+       // console.log("I am four");
+        //console.log("I am five");
+        //So we use Asynchronous programming
+      
+        //setTimeout(()=>{
+        //    console.log("hi");
+        //},10000);
+
+//function Food(dish,order){
+//    setTimeout(()=>{
+//        console.log(dish);
+//        if(order){
+//            order();
+//        }
+//    },2000);
+//}
+//Food("Pizza",()=>{
+//   Food("Burger",()=>{
+//       Food("Patties",()=>{
+//            Food("Cold Drink");
+//      })
+//    })
+//})
+
+
+//promise stages=Pending,successful,rejected
+//promise resolve-->then function,reject-->catch
+//resolve and reject are call back function which 
+// let prom =new Promise((resolve,reject)=>
+// {
+//     if(false){
+//         resolve("promise completed");
+//     }
+//     else{
+//         reject("promise is not completed");
+//     }
+// })
+// prom.then((response)=>{
+//     console.log(response);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
+
+//   function Food(dish) {
+//         return new Promise((resolve, reject) => {
+//            setTimeout(() => {
+//             console.log(dish)
+//              resolve(dish);
+//            }, 3000);
+//          });
+//       }
+
+//   Food("Pizza").then(()=>{
+         
+//          Food("Burger").then(()=>{
+             
+//             Food("Patties").then(()=>{
+                  
+//                 Food("Cold drink")
+//               })
+//      })
+//     })
+
+function Food(dish) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            // console.log(dish)
+            resolve(dish);
+          }, 3000);
+        });
+    }
+
+    async function output(){
+
+        let pizza = await Food("Pizza");
+        console.log(pizza)
+        let burger = await Food("Burger");
+        console.log(burger);
+        let patties = await Food("Patties");
+        console.log(patties)
+
+
+    }
+
+    function prom(){
+        return new Promise((resolve,reject)=>
+{
+    if(false){
+        resolve("promise completed");
+    }
+    else{
+        reject("promise is not completed");
+    }
+})
+}
+prom().then((response)=>{
+    console.log(response);
+})
+.catch((error)=>{
+    console.log(error);
+})
+
+
+
+    </script>
+</body>
+</html>
