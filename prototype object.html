@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //let obj=
+    //{
+//         output(){
+// console.log("hello");
+//         },
+//         name:function(){
+//             console.log("hi");
+//         }
+//     }
+//     console.log(obj);
+// obj.output();
+// obj.name();
+// //obj.xyz();//error
+// console.log(obj.toString());//to string  object ke prototype object me bana hua hai
+//prototype ek object hota hai 
+
+// let a=[10,20,30,40,50,60];
+// console.log(a);
+
+let obj1={ output(){
+    console.log("Hello i am output function");
+}};
+let obj2={
+    show(){
+        console.log("Hello i am show function");
+    }
+};
+let obj3={
+    name(){
+        console.log("Hello i am name function");
+    }
+};
+
+obj1.__proto__=obj2;//prototype chaining
+console.log(obj1);   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+obj1.show();
+
+obj1.__proto__=obj3;   
+obj1.name();
+</script>
+</body>
+</html>
